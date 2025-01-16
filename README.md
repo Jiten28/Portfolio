@@ -87,7 +87,7 @@ This portfolio is hosted on GitHub Pages. You can deploy it by following these s
 
 ## Live Demo
 
-[Check out the live demo of my portfolio](jitenkumarportfolio.netlify.app).
+jitenkumarportfolio.netlify.app
 
 ## Future Enhancements
 
