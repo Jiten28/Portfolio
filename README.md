@@ -2,8 +2,7 @@
 
 Welcome to my professional portfolio! This project showcases my expertise in building intuitive and responsive web applications using React.js.
 
-![image](https://github.com/user-attachments/assets/ccc217ae-1e0b-47c7-8ba6-35c9929b9d9e)
-
+![image](https://github.com/user-attachments/assets/80318f67-aea4-4094-8719-b7baa17b13df)
 
 ## Overview
 
