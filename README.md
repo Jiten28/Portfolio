@@ -2,14 +2,13 @@
 
 Welcome to my professional portfolio! This project showcases my expertise in building intuitive and responsive web applications using React.js.
 
-![image](https://github.com/user-attachments/assets/80318f67-aea4-4094-8719-b7baa17b13df)
+![image](https://github.com/user-attachments/assets/5cc8900a-7ef5-48aa-9a38-43ec1a71a830)
 
 ## Overview
 
 This portfolio serves as a hub for my work, skills, and experiences. Built with modern web development practices, it highlights my proficiency in frontend development, UI/UX design, and React.js. It’s designed to be a dynamic and interactive platform where you can explore my projects, resume, and contact information.
 
 ![image (2)](https://github.com/user-attachments/assets/92ec96ba-9fd8-4a3b-a726-21b47e0797f6)
-
 
 ## Features
 
