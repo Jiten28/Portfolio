@@ -19,37 +19,37 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-            I fell in love with programming early on, and I’ve learned a lot 
-            through the journey (or at least, I think so… 🤷‍♂️).
+            I developed a passion for programming early on 
+            and have gained valuable experience throughout my journey.
               <br />
-              <br />I am fluent in classics like
+              <br />I am proficient in  
               <i>
                 <b className="purple"> Python, Java, and React, </b>
-              </i>
+              </i> with strong problem-solving and development skills.
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              My areas of interest include building innovative&nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
+                <b className="purple">Web Technologies and Products, </b> 
+                exploring advancements in{" "}
                 <b className="purple">
-                AI and Computer Vision.
+                Artificial Intelligence, Computer Vision, and Data Science.
                 </b>
               </i>
               <br />
               <br />
-              Whenever possible, I focus on developing applications
-              with <b className="purple">Node.js</b> and
+              I actively seek opportunities to experiment
+              with 
+              <i>
+                <b className="purple">emerging tools, frameworks,</b>
+              </i> and
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  challenges
                 </b>
               </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js</b>
-              </i>
+              &nbsp; that push me to grow as a developer.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
