@@ -10,7 +10,10 @@ import ToDo from "../../Assets/Projects/ToDo.png";
 import AVA from "../../Assets/Projects/AVA.png";
 import ECommerce from "../../Assets/Projects/ECommerce.png";
 import Stock from "../../Assets/Projects/Stock.png";
-import Malware from "../../Assets/Projects/Malware.png";
+import PERFUME_SHOP from "../../Assets/Projects/PerfumeShop.png";
+import BIZLINK from "../../Assets/Projects/BizLink.png";
+import RUBIKS_CUBE from "../../Assets/Projects/RCS.png";
+import LOGIN_REGISTER from "../../Assets/Projects/Login.png";
 
 function Projects() {
   return (
@@ -46,6 +49,16 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={PERFUME_SHOP}
+              isBlog={false}
+              title="Perfume Shop - Full Stack Web App"
+              description="A full-stack perfume shop application built with React, TailwindCSS, Vite, Node.js, and MongoDB. It features a responsive UI, product pages with multiple images, reviews stored in MongoDB, a trending perfumes section, and smooth animations for an engaging shopping experience."
+              ghLink="https://github.com/Jiten28/Perfume-Shop-MERN-Stack"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={ECommerce}
               isBlog={false}
               title="E-Commerce Website"
@@ -66,6 +79,17 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={BIZLINK}
+              isBlog={false}
+              title="BizLink - Buyer & Seller Matching Platform"
+              description="A React + Vite web platform that connects business buyers and sellers. Features role-based onboarding, buyer profile browsing, AI-powered document analysis, compatibility scoring, and dark/light theme support. Deployed on Vercel with a sleek and scalable design."
+              ghLink="https://github.com/Jiten28/BizLink"
+              demoLink="https://biz-link-alpha.vercel.app"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={ToDo}
               isBlog={false}
               title="ToDo List Application"
@@ -76,11 +100,31 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={RUBIKS_CUBE}
+              isBlog={false}
+              title="Rubik’s Cube Solver"
+              description="An interactive 3x3 Rubik’s Cube solver built with Python using Kociemba’s Two-Phase Algorithm. Includes a Tkinter-based GUI, real-time input validation, simulation of 18 cube moves, error handling, and accurate cube modeling for an engaging solving experience."
+              ghLink="https://github.com/Jiten28/Rubiks-Cube-Solver"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={Face}
               isBlog={false}
               title="Facial Recognition Attendance System"
               description="A Python-based facial recognition system using computer vision libraries for efficient attendance tracking. The model achieves 95% accuracy in face detection and recognition. Integrated with Firebase, it ensures real-time data management, offering a reliable and scalable solution for institutions and organizations."
               ghLink="https://github.com/Jiten28/Face-Recognition-System"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={LOGIN_REGISTER} 
+              isBlog={false}
+              title="Login/Register Page"
+              description="A responsive login and registration page built with ReactJS and TailwindCSS. It allows users to log in with credentials or register a new account. Featuring clean design, form validation, and mobile-first responsiveness, it provides a modern and user-friendly authentication interface."
+              ghLink="https://github.com/Jiten28/login-register"
             />
           </Col>
 
@@ -104,15 +148,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Malware}
-              isBlog={false}
-              title="Malware Detection using Deep Learning"
-              description="A deep learning-based malware detection system that analyzes file behavior and characteristics to identify malicious software. It achieves a detection accuracy of 98% using a convolutional neural network (CNN) model, significantly reducing false positives and enhancing cybersecurity measures."
-              ghLink="https://github.com/Jiten28/Malware-Detection-using-Deep-Learning"
-            />
-          </Col>
+
 
         </Row>
       </Container>
