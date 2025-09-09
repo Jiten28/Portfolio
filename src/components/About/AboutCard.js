@@ -12,7 +12,7 @@ function AboutCard() {
             from <b className="purple"> Ranchi, India.</b>
             <br />
             I have completed my <b className="purple">B.Tech degree </b> in
-            <b className="purple"> Computer Science and Engineering</b> at <b className="purple">MRITS, Telangana.</b>,
+            <b className="purple"> Computer Science and Engineering</b> at <b className="purple">Jawaharlal Nehru Technological University Hyderabad, Telangana.</b>,
             <br />
             <br />
             Beyond academics, I actively pursue interests that enhance creativity and perspective, including
