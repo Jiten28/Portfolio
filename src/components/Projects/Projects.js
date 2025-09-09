@@ -93,8 +93,9 @@ function Projects() {
               imgPath={ToDo}
               isBlog={false}
               title="ToDo List Application"
-              description="A task management app built with React.js, Vite, and styled with Tailwind CSS. It enables users to add, edit, delete, and track tasks efficiently. The app provides an intuitive interface, achieving a user satisfaction rate of 90% and loading times under 1 second, ensuring both functionality and a seamless user experience."
+              description="A modern task management application built with React.js, Vite, and Tailwind CSS. It allows users to add, edit, delete, and track tasks effortlessly while maintaining a clean, intuitive interface. Optimized for performance, the app achieves a 90% user satisfaction rate and loads in under 1 second, ensuring both robust functionality and a seamless experience across devices."
               ghLink="https://github.com/Jiten28/ToDo-List"
+              demoLink="https://to-do-list-six-ecru-67.vercel.app"
             />
           </Col>
 
