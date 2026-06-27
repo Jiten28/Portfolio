@@ -14,6 +14,12 @@ import PERFUME_SHOP from "../../Assets/Projects/PerfumeShop.png";
 import BIZLINK from "../../Assets/Projects/BizLink.png";
 import RUBIKS_CUBE from "../../Assets/Projects/RCS.png";
 import LOGIN_REGISTER from "../../Assets/Projects/Login.png";
+import NeuralRetail from "../../Assets/Projects/NeuralRetail.png";
+import LegalAI from "../../Assets/Projects/LegalAI.png";
+import Gemini from "../../Assets/Projects/Gemini.png";
+import Sentiment from "../../Assets/Projects/Sentiment.png";
+import Malware from "../../Assets/Projects/Malware.png";
+import Reflection from "../../Assets/Projects/Reflection.png";
 
 function Projects() {
   return (
@@ -27,6 +33,48 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={NeuralRetail}
+              isBlog={false}
+              title="NeuralRetail – AI Sales Analytics"
+              description="An end-to-end retail analytics platform built using Python, Machine Learning, SQL, and Power BI. It performs sales forecasting, customer segmentation using clustering, inventory analysis, KPI dashboards, and business intelligence reporting to help retailers make data-driven decisions."
+              ghLink="https://github.com/Jiten28/NeuralRetail-AI-Sales-Analytics"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Stock}
+              isBlog={false}
+              title="StockMentor"
+              description="An AI-powered platform that simplifies stock market analysis for beginners. StockMentor offers real-time data, LSTM-based predictions, personalized investment tips, and educational resources. With features like watchlists and alerts, it helps users make informed decisions, achieving a prediction accuracy of 85% and a user engagement increase of 30%."
+              ghLink="https://github.com/Jiten28/StockMentor"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={leaf}
+              isBlog={false}
+              title="Plant Disease Detection"
+              description="Using machine learning, this project identifies plant diseases with 95% accuracy, reducing inspection time and errors. It automates disease detection to support healthier crops, boost productivity by 30%, and promote sustainable farming."
+              ghLink="https://github.com/Jiten28/Plant-Disease-Detection"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={BIZLINK}
+              isBlog={false}
+              title="BizLink - Buyer & Seller Matching Platform"
+              description="A React + Vite web platform that connects business buyers and sellers. Features role-based onboarding, buyer profile browsing, AI-powered document analysis, compatibility scoring, and dark/light theme support. Deployed on Vercel with a sleek and scalable design."
+              ghLink="https://github.com/Jiten28/BizLink"
+              demoLink="https://biz-link-alpha.vercel.app"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={AVA}
@@ -39,11 +87,21 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={LegalAI}
               isBlog={false}
-              title="Plant Disease Detection"
-              description="Using machine learning, this project identifies plant diseases with 95% accuracy, reducing inspection time and errors. It automates disease detection to support healthier crops, boost productivity by 30%, and promote sustainable farming."
-              ghLink="https://github.com/Jiten28/Plant-Disease-Detection"
+              title="Legal AI Assistant"
+              description="An AI-powered legal assistant developed with Python and Gemini API that helps users understand legal documents, answer legal queries, summarize contracts, and provide context-aware explanations through natural language processing."
+              ghLink="https://github.com/Jiten28/legal-ai-assistant"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Gemini}
+              isBlog={false}
+              title="Personal Gemini Assistant"
+              description="A desktop AI assistant powered by Google's Gemini API capable of answering questions, generating content, assisting with coding, summarizing information, and performing conversational tasks through an intuitive Python interface."
+              ghLink="https://github.com/Jiten28/Personal-Gemini"
             />
           </Col>
 
@@ -69,33 +127,21 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={Stock}
+              imgPath={Face}
               isBlog={false}
-              title="StockMentor"
-              description="An AI-powered platform that simplifies stock market analysis for beginners. StockMentor offers real-time data, LSTM-based predictions, personalized investment tips, and educational resources. With features like watchlists and alerts, it helps users make informed decisions, achieving a prediction accuracy of 85% and a user engagement increase of 30%."
-              ghLink="https://github.com/Jiten28/StockMentor"
+              title="Facial Recognition Attendance System"
+              description="A Python-based facial recognition system using computer vision libraries for efficient attendance tracking. The model achieves 95% accuracy in face detection and recognition. Integrated with Firebase, it ensures real-time data management, offering a reliable and scalable solution for institutions and organizations."
+              ghLink="https://github.com/Jiten28/Face-Recognition-System"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={BIZLINK}
+              imgPath={Malware}
               isBlog={false}
-              title="BizLink - Buyer & Seller Matching Platform"
-              description="A React + Vite web platform that connects business buyers and sellers. Features role-based onboarding, buyer profile browsing, AI-powered document analysis, compatibility scoring, and dark/light theme support. Deployed on Vercel with a sleek and scalable design."
-              ghLink="https://github.com/Jiten28/BizLink"
-              demoLink="https://biz-link-alpha.vercel.app"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={ToDo}
-              isBlog={false}
-              title="ToDo List Application"
-              description="A modern task management application built with React.js, Vite, and Tailwind CSS. It allows users to add, edit, delete, and track tasks effortlessly while maintaining a clean, intuitive interface. Optimized for performance, the app achieves a 90% user satisfaction rate and loads in under 1 second, ensuring both robust functionality and a seamless experience across devices."
-              ghLink="https://github.com/Jiten28/ToDo-List"
-              demoLink="https://to-do-list-six-ecru-67.vercel.app"
+              title="Malware Detection using Deep Learning"
+              description="A cybersecurity project that leverages deep learning models to identify malicious software based on executable features. The system automates malware classification and demonstrates the application of AI in threat detection."
+              ghLink="https://github.com/Jiten28/Malware-Detection-using-Deep-Learning"
             />
           </Col>
 
@@ -111,11 +157,22 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={Face}
+              imgPath={Sentiment}
               isBlog={false}
-              title="Facial Recognition Attendance System"
-              description="A Python-based facial recognition system using computer vision libraries for efficient attendance tracking. The model achieves 95% accuracy in face detection and recognition. Integrated with Firebase, it ensures real-time data management, offering a reliable and scalable solution for institutions and organizations."
-              ghLink="https://github.com/Jiten28/Face-Recognition-System"
+              title="Sentiment Analysis App"
+              description="A machine learning application that analyzes user text and classifies sentiment as positive, negative, or neutral. Built using Python and NLP techniques to provide real-time sentiment prediction with an easy-to-use interface."
+              ghLink="https://github.com/Jiten28/sentiment_app"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ToDo}
+              isBlog={false}
+              title="ToDo List Application"
+              description="A modern task management application built with React.js, Vite, and Tailwind CSS. It allows users to add, edit, delete, and track tasks effortlessly while maintaining a clean, intuitive interface. Optimized for performance, the app achieves a 90% user satisfaction rate and loads in under 1 second, ensuring both robust functionality and a seamless experience across devices."
+              ghLink="https://github.com/Jiten28/ToDo-List"
+              demoLink="https://to-do-list-six-ecru-67.vercel.app"
             />
           </Col>
 
@@ -149,7 +206,15 @@ function Projects() {
             />
           </Col>
 
-
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Reflection}
+              isBlog={false}
+              title="Daily Reflection Tree"
+              description="A Python application that encourages personal growth by organizing daily reflections into a structured tree format. It helps users track thoughts, emotions, and progress over time through an interactive journaling system."
+              ghLink="https://github.com/Jiten28/daily-reflection-tree"
+            />
+          </Col>
 
         </Row>
       </Container>
