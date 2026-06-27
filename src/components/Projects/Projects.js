@@ -71,7 +71,6 @@ function Projects() {
               title="BizLink - Buyer & Seller Matching Platform"
               description="A React + Vite web platform that connects business buyers and sellers. Features role-based onboarding, buyer profile browsing, AI-powered document analysis, compatibility scoring, and dark/light theme support. Deployed on Vercel with a sleek and scalable design."
               ghLink="https://github.com/Jiten28/BizLink"
-              demoLink="https://biz-link-alpha.vercel.app"
             />
           </Col>
 
