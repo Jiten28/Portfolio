@@ -9,6 +9,7 @@ import Face from "../../Assets/Projects/Face.png";
 import ToDo from "../../Assets/Projects/ToDo.png";
 import AVA from "../../Assets/Projects/AVA.png";
 import ECommerce from "../../Assets/Projects/ECommerce.png";
+import MediVerse from "../../Assets/Projects/MediVerse.png";
 import Stock from "../../Assets/Projects/Stock.png";
 import PERFUME_SHOP from "../../Assets/Projects/PerfumeShop.png";
 import BIZLINK from "../../Assets/Projects/BizLink.png";
@@ -36,11 +37,12 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={NeuralRetail}
+              imgPath={MediVerse}
               isBlog={false}
-              title="NeuralRetail – AI Sales Analytics"
-              description="An end-to-end retail analytics platform built using Python, Machine Learning, SQL, and Power BI. It performs sales forecasting, customer segmentation using clustering, inventory analysis, KPI dashboards, and business intelligence reporting to help retailers make data-driven decisions."
-              ghLink="https://github.com/Jiten28/NeuralRetail-AI-Sales-Analytics"
+              title="MediVerse AI – Healthcare Recommendation System"
+              description="An AI-powered healthcare recommendation platform built with Flask, Scikit-learn, SQLite, Bootstrap, and Chart.js. Predicts diseases from symptoms, provides medicine and specialist recommendations, features interactive analytics dashboards, PDF/Excel report export, secure authentication, and an admin dashboard. Deployed on Render with a responsive UI."
+              ghLink="https://github.com/Jiten28/AI-Healthcare-Recommendation-System"
+              demoLink="https://mediverse-ai.onrender.com"
             />
           </Col>
 
@@ -51,6 +53,16 @@ function Projects() {
               title="StockMentor"
               description="An AI-powered platform that simplifies stock market analysis for beginners. StockMentor offers real-time data, LSTM-based predictions, personalized investment tips, and educational resources. With features like watchlists and alerts, it helps users make informed decisions, achieving a prediction accuracy of 85% and a user engagement increase of 30%."
               ghLink="https://github.com/Jiten28/StockMentor"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={NeuralRetail}
+              isBlog={false}
+              title="NeuralRetail – AI Sales Analytics"
+              description="An end-to-end retail analytics platform built using Python, Machine Learning, SQL, and Power BI. It performs sales forecasting, customer segmentation using clustering, inventory analysis, KPI dashboards, and business intelligence reporting to help retailers make data-driven decisions."
+              ghLink="https://github.com/Jiten28/NeuralRetail-AI-Sales-Analytics"
             />
           </Col>
 
