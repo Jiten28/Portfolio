@@ -21,6 +21,9 @@ import Gemini from "../../Assets/Projects/Gemini.png";
 import Sentiment from "../../Assets/Projects/Sentiment.png";
 import Malware from "../../Assets/Projects/Malware.png";
 import Reflection from "../../Assets/Projects/Reflection.png";
+import VoyageAI from "../../Assets/Projects/VoyageAI.png";
+import CrowdPulse from "../../Assets/Projects/CrowdPulse.png";
+import AgriVision from "../../Assets/Projects/AgriVision.png";
 
 function Projects() {
   return (
@@ -35,6 +38,36 @@ function Projects() {
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={VoyageAI}
+              isBlog={false}
+              title="Voyage-AI – Intelligent Travel Planner"
+              description="An AI-powered travel planning platform built using Google AI Studio and Antigravity that generates personalized itineraries, budget estimates, hotel recommendations, tourist attractions, restaurant suggestions, and AI-generated travel visuals based on user preferences. Features a responsive interface with dark/light mode and an intuitive trip planning experience."
+              ghLink="https://github.com/Jiten28/Voyage-AI"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={CrowdPulse}
+              isBlog={false}
+              title="CrowdPulse"
+              description="An AI-powered crowd analytics platform developed using Python and computer vision to monitor crowd density, estimate occupancy, and provide real-time insights for public safety, event management, and smart city applications."
+              ghLink="https://github.com/Jiten28/Crowdpulse"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={AgriVision}
+              isBlog={false}
+              title="AgriVision-XAI"
+              description="An explainable AI platform for smart agriculture that detects crop diseases, analyzes plant health, and provides transparent AI predictions using computer vision and machine learning. Designed to help farmers make informed agricultural decisions."
+              ghLink="https://github.com/Jiten28/AgriVision-XAI"
+            />
+          </Col>
+          
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={MediVerse}

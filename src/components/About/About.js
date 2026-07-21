@@ -11,7 +11,9 @@ function About() {
   return (
     <Container fluid className="about-section">
       <Particle />
+
       <Container>
+        {/* About Me */}
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
             md={7}
@@ -21,30 +23,81 @@ function About() {
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+            <h1
+              className="project-heading"
+              style={{ fontSize: "2.3em", paddingBottom: "15px" }}
+            >
+              Who <strong className="purple">Am I?</strong>
             </h1>
+
+            <p
+              style={{
+                textAlign: "center",
+                color: "#cfcfcf",
+                marginBottom: "30px",
+              }}
+            >
+              Passionate about building AI-powered solutions that solve
+              real-world problems through Artificial Intelligence, Machine
+              Learning, Data Science, and Full-Stack Development.
+            </p>
+
             <Aboutcard />
           </Col>
+
           <Col
             md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            style={{
+              paddingTop: "110px",
+              paddingBottom: "50px",
+            }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <img
+              src={laptopImg}
+              alt="About Jiten Kumar"
+              className="img-fluid"
+            />
           </Col>
         </Row>
+
+        {/* Technical Skills */}
         <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
+          Technical <strong className="purple">Skills</strong>
         </h1>
+
+        <p
+          style={{
+            textAlign: "center",
+            color: "#cfcfcf",
+            marginBottom: "30px",
+          }}
+        >
+          Technologies I use to build intelligent, scalable, and impactful
+          software solutions.
+        </p>
 
         <Techstack />
 
+        {/* Development Tools */}
         <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
+          Development <strong className="purple">Tools</strong>
         </h1>
+
+        <p
+          style={{
+            textAlign: "center",
+            color: "#cfcfcf",
+            marginBottom: "30px",
+          }}
+        >
+          Tools, platforms, and software that power my development workflow,
+          deployment, and collaboration.
+        </p>
+
         <Toolstack />
 
+        {/* GitHub Activity */}
         <Github />
       </Container>
     </Container>

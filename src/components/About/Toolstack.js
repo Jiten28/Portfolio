@@ -4,6 +4,12 @@ import {
   SiVisualstudiocode,
   SiPostman,
   SiVercel,
+  SiGithub,
+  SiDocker,
+  SiRender,
+  SiPowerbi,
+  SiGooglecloud,
+  SiGit,
 } from "react-icons/si";
 import { FaWindows } from "react-icons/fa";
 import { DiUbuntu } from "react-icons/di";
@@ -14,15 +20,43 @@ function Toolstack() {
       <Col xs={4} md={2} className="tech-icons">
         <FaWindows />
       </Col>
+
       <Col xs={4} md={2} className="tech-icons">
-        <DiUbuntu  />
+        <DiUbuntu />
       </Col>
+
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
       </Col>
+
       <Col xs={4} md={2} className="tech-icons">
         <SiPostman />
       </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGithub />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGit />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiDocker />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiRender />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPowerbi />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGooglecloud />
+      </Col>
+
       <Col xs={4} md={2} className="tech-icons">
         <SiVercel />
       </Col>
