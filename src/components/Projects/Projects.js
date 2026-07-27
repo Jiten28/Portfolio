@@ -17,13 +17,13 @@ import RUBIKS_CUBE from "../../Assets/Projects/RCS.png";
 import LOGIN_REGISTER from "../../Assets/Projects/Login.png";
 import NeuralRetail from "../../Assets/Projects/NeuralRetail.png";
 import LegalAI from "../../Assets/Projects/LegalAI.png";
-import Gemini from "../../Assets/Projects/Gemini.png";
 import Sentiment from "../../Assets/Projects/Sentiment.png";
 import Malware from "../../Assets/Projects/Malware.png";
 import Reflection from "../../Assets/Projects/Reflection.png";
 import VoyageAI from "../../Assets/Projects/VoyageAI.png";
 import CrowdPulse from "../../Assets/Projects/CrowdPulse.png";
 import AgriVision from "../../Assets/Projects/AgriVision.png";
+import NimbusAI from "../../Assets/Projects/NimbusAI.png";
 
 function Projects() {
   return (
@@ -40,10 +40,30 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={AgriVision}
+              isBlog={false}
+              title="AgriVision-XAI"
+              description="Research-grade Explainable AI system for plant disease detection built using EfficientNetB0, CBAM attention, Grad-CAM, Grad-CAM++, and LIME. Features disease severity estimation, cross-domain evaluation, TensorFlow Lite deployment, and an interactive Streamlit application for transparent agricultural AI."
+              ghLink="https://github.com/Jiten28/AgriVision-XAI"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={NimbusAI}
+              isBlog={false}
+              title="Nimbus AI – Intelligent AI Assistant with Persistent Memory"
+              description="A next-generation AI assistant powered by Google Gemini, featuring persistent conversational memory, Retrieval-Augmented Generation (RAG), voice interaction, real-time weather and cryptocurrency lookup, web & image search, and an immersive particle-sphere interface built with Three.js. Designed with a modular Flask backend for scalable AI applications and future cloud deployment."
+              ghLink="https://github.com/Jiten28/Nimbus-AI"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={VoyageAI}
               isBlog={false}
               title="Voyage-AI – Intelligent Travel Planner"
-              description="An AI-powered travel planning platform built using Google AI Studio and Antigravity that generates personalized itineraries, budget estimates, hotel recommendations, tourist attractions, restaurant suggestions, and AI-generated travel visuals based on user preferences. Features a responsive interface with dark/light mode and an intuitive trip planning experience."
+              description="An AI-powered travel planning platform built with Google AI Studio and Antigravity that generates personalized itineraries, budget planning, hotel recommendations, destination insights, weather forecasts, and AI-generated travel visuals through an interactive modern interface."
               ghLink="https://github.com/Jiten28/Voyage-AI"
             />
           </Col>
@@ -53,18 +73,8 @@ function Projects() {
               imgPath={CrowdPulse}
               isBlog={false}
               title="CrowdPulse"
-              description="An AI-powered crowd analytics platform developed using Python and computer vision to monitor crowd density, estimate occupancy, and provide real-time insights for public safety, event management, and smart city applications."
+              description="An AI-powered crowd analytics platform using computer vision and deep learning for real-time crowd detection, density estimation, occupancy monitoring, and public safety analytics. Designed for smart cities, transportation hubs, and large-scale event management."
               ghLink="https://github.com/Jiten28/Crowdpulse"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={AgriVision}
-              isBlog={false}
-              title="AgriVision-XAI"
-              description="An explainable AI platform for smart agriculture that detects crop diseases, analyzes plant health, and provides transparent AI predictions using computer vision and machine learning. Designed to help farmers make informed agricultural decisions."
-              ghLink="https://github.com/Jiten28/AgriVision-XAI"
             />
           </Col>
           
@@ -73,7 +83,7 @@ function Projects() {
               imgPath={MediVerse}
               isBlog={false}
               title="MediVerse AI – Healthcare Recommendation System"
-              description="An AI-powered healthcare recommendation platform built with Flask, Scikit-learn, SQLite, Bootstrap, and Chart.js. Predicts diseases from symptoms, provides medicine and specialist recommendations, features interactive analytics dashboards, PDF/Excel report export, secure authentication, and an admin dashboard. Deployed on Render with a responsive UI."
+              description="A full-stack AI healthcare platform that predicts diseases from symptoms, recommends medicines and specialists, provides health analytics dashboards, secure authentication, report generation, and an intelligent recommendation engine powered by machine learning."
               ghLink="https://github.com/Jiten28/AI-Healthcare-Recommendation-System"
               demoLink="https://mediverse-ai.onrender.com"
             />
@@ -136,16 +146,6 @@ function Projects() {
               title="Legal AI Assistant"
               description="An AI-powered legal assistant developed with Python and Gemini API that helps users understand legal documents, answer legal queries, summarize contracts, and provide context-aware explanations through natural language processing."
               ghLink="https://github.com/Jiten28/legal-ai-assistant"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Gemini}
-              isBlog={false}
-              title="Personal Gemini Assistant"
-              description="A desktop AI assistant powered by Google's Gemini API capable of answering questions, generating content, assisting with coding, summarizing information, and performing conversational tasks through an intuitive Python interface."
-              ghLink="https://github.com/Jiten28/Personal-Gemini"
             />
           </Col>
 
