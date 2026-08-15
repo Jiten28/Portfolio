@@ -83,10 +83,10 @@ function Projects() {
             <ProjectCard
               imgPath={MediVerse}
               isBlog={false}
-              title="MediVerse AI – Healthcare Recommendation System"
+              title="Wonderful Crown – Healthcare Recommendation System"
               description="A full-stack AI healthcare platform that predicts diseases from symptoms, recommends medicines and specialists, provides health analytics dashboards, secure authentication, report generation, and an intelligent recommendation engine powered by machine learning."
-              ghLink="https://github.com/Jiten28/AI-Healthcare-Recommendation-System"
-              demoLink="https://mediverse-ai.onrender.com"
+              ghLink="https://github.com/Jiten28/Wonderful-Crown"
+              demoLink="https://wonderful-crown.onrender.com"
             />
           </Col>
 
