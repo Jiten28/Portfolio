@@ -55,7 +55,7 @@ function Projects() {
               title="Cindrix – Intelligent AI Assistant with Persistent Memory"
               description="A next-generation AI assistant powered by Google Gemini, featuring persistent conversational memory, Retrieval-Augmented Generation (RAG), voice interaction, real-time weather and cryptocurrency lookup, web & image search, and an immersive particle-sphere interface built with Three.js. Designed with a modular Flask backend for scalable AI applications and future cloud deployment."
               ghLink="https://github.com/Jiten28/Cindrix"
-              demoLink="https://nimbus-ai-ttrz.onrender.com"
+              demoLink="https://cindrix-ai.onrender.com/"
             />
           </Col>
 
