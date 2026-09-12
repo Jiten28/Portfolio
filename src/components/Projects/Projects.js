@@ -158,6 +158,7 @@ function Projects() {
               title="Perfume Shop - Full Stack Web App"
               description="A full-stack perfume shop application built with React, TailwindCSS, Vite, Node.js, and MongoDB. It features a responsive UI, product pages with multiple images, reviews stored in MongoDB, a trending perfumes section, and smooth animations for an engaging shopping experience."
               ghLink="https://github.com/Jiten28/Perfume-Shop-MERN-Stack"
+              demoLink="https://perfume-shop-digital.netlify.app/"
             />
           </Col>
 
