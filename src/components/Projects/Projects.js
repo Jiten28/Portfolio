@@ -66,6 +66,7 @@ function Projects() {
               title="Voyage-AI – Intelligent Travel Planner"
               description="An AI-powered travel planning platform built with Google AI Studio and Antigravity that generates personalized itineraries, budget planning, hotel recommendations, destination insights, weather forecasts, and AI-generated travel visuals through an interactive modern interface."
               ghLink="https://github.com/Jiten28/Voyage-AI"
+              demoLink="https://voyage-ai-p1bd.onrender.com/"
             />
           </Col>
 
