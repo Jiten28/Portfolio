@@ -10,6 +10,8 @@ export interface PortfolioProject {
   group: "AI / ML" | "GenAI" | "Full-Stack / Web" | "Utilities";
   featuredSummary?: string;
   workImages?: string[];
+  galleryImages?: string[];
+  imageCaption?: string;
   achievement?: string;
   contribution?: string;
   demoNote?: string;
@@ -60,6 +62,12 @@ export const projects: PortfolioProject[] = [
   {
     name: "FounderPilot AI",
     slug: "founderpilot-ai",
+    galleryImages: [
+      "/projects/founderpilot-ai.webp",
+      "/work/founderpilot-ai-1.webp",
+      "/work/founderpilot-ai-2.webp",
+    ],
+    imageCaption: "Captured from the live app.",
     category: "Hackathon · Hacklabify",
     desc: "An AI-powered startup assessment platform that turns founder inputs into a health score, risk assessment, and a 30-day action plan. Includes a structured dashboard, conversational guidance, and deterministic fallback responses when AI is unavailable.",
     stack: ["React", "TypeScript", "FastAPI", "Groq", "SQLite", "Recharts"],
@@ -104,6 +112,8 @@ export const projects: PortfolioProject[] = [
   {
     name: "CrowdPulse",
     slug: "crowdpulse",
+    galleryImages: ["/projects/crowdpulse.webp"],
+    imageCaption: "Live interface \u00b7 initial state; no sample data loaded.",
     category: "Computer Vision",
     desc: "An AI-powered crowd analytics platform using computer vision and deep learning for real-time crowd detection, density estimation, occupancy monitoring, and public safety analytics for smart cities and events.",
     stack: ["Python", "Computer Vision", "Deep Learning"],
@@ -124,6 +134,12 @@ export const projects: PortfolioProject[] = [
   {
     name: "BizLink",
     slug: "bizlink",
+    galleryImages: [
+      "/projects/bizlink.webp",
+      "/work/bizlink-landing.webp",
+      "/work/bizlink-onboarding.webp",
+    ],
+    imageCaption: "Interface screenshots published in the project README.",
     category: "B2B Platform",
     desc: "A React + Vite platform connecting business buyers and sellers with role-based onboarding, buyer profile browsing, AI-powered document analysis, compatibility scoring, and dark/light theme support.",
     stack: ["React", "Vite", "AI Document Analysis"],
@@ -154,6 +170,7 @@ export const projects: PortfolioProject[] = [
   {
     name: "Legal AI Assistant",
     slug: "legal-ai-assistant",
+    imageCaption: "Captured from the live app.",
     category: "Generative AI",
     desc: "An AI-powered legal assistant built with Python and the Gemini API that helps users understand legal documents, answer legal queries, summarize contracts, and provide context-aware NLP explanations.",
     stack: ["Python", "Gemini API", "NLP"],

@@ -57,7 +57,7 @@ The canonical and social URLs retain the existing `https://jitenkumarportfolio.n
 - Added screenshot lightboxes with native dialog focus handling, Escape dismissal, and keyboard previous/next navigation.
 - Added gallery search, category filters, counts, and an empty state.
 - Skills accordion uses real buttons, expanded states, hidden collapsed panels, and visible focus.
-- Original scroll-linked About text, opposing full-tech marquee rows, featured-card scaling, and social-icon rotation/glow are preserved with reduced-motion alternatives. The marquee shows 21 unique technologies; a second visual copy only enables a seamless loop, while reduced motion shows each once. Original custom source components are preserved in `reference/original-customizations/` for comparison; they are not a second website.
+- Original scroll-linked About text, opposing full-tech marquee rows, featured-card scaling, and social-icon rotation/glow are preserved with reduced-motion alternatives. The marquee shows 21 unique technologies; a second visual copy only enables a seamless loop, while reduced motion shows each once.
 - Sparse constellation-shaped neural connections replace the dense mesh, with cursor glow and subtle parallax.
 - Contact Me appears twice on the homepage: hero and footer; the About duplicate is removed.
 - FounderPilot screenshots use landscape-proportioned slots without distortion.
@@ -79,12 +79,24 @@ The canonical and social URLs retain the existing `https://jitenkumarportfolio.n
 
 ## Tests and limits
 
-See `docs/QA.md`. A successful build, automated accessibility audit, and local browser checks do not guarantee every external demo's functionality or replace testing on actual devices and the deployment host.
+A successful build, automated accessibility audit, and local browser checks do not guarantee every external demo's functionality or replace testing on actual devices and the deployment host.
 
 ## Windows install recovery / migrating the old repository
 If `npm ci` fails with EPERM on a native Lightning CSS file, stop the portfolio dev server/build processes, close tools using this project, and retry. If still locked, restart Windows. Then remove only the project’s `node_modules` and run `npm ci` again. Do not delete the lockfile or disable antivirus. Use the documented Node 22.x environment. The subsequent missing-TypeScript error can be a consequence of the incomplete install.
 
-Use a clean copy of this release’s `src` and `public` folders, rather than merging old Create React App source and unused custom TSX files into it. Back up your existing repository first and keep `.git`. Original custom components are retained separately in `reference/original-customizations`. Old CRA `public/index.html` and `.js` app entries are replaced by root `index.html`, `src/main.tsx`, and `src/App.tsx`. Review deletions and untracked additions together before committing. Never commit `node_modules`, `dist`, local env files, or downloaded ZIPs.
+Use a clean copy of this release’s `src` and `public` folders, rather than merging old Create React App source and unused custom TSX files into it. Back up your existing repository first and keep `.git`. Old CRA `public/index.html` and `.js` app entries are replaced by root `index.html`, `src/main.tsx`, and `src/App.tsx`. Review deletions and untracked additions together before committing. Never commit `node_modules`, `dist`, local env files, or downloaded ZIPs.
 
-## Latest navbar correction / cleanup
-The navigation uses one persistent underline in local nav coordinates instead of shared-layout projection. It slides horizontally without animating document scroll offsets vertically. See `docs/CLEANUP.md` for the removable-file list. `public/cv-pages` is obsolete and is not included. The unused portrait is retained only under `reference/unused-assets`.
+## Latest navbar and real screenshot update (v8)
+
+- Navbar underline fades in place beneath each link. No shared-layout animation, position measurement, or cross-link travel.
+- FounderPilot: fresh captures from https://founderpilot-ai-frontend.onrender.com/ (home, input form, feature section). No startup analysis was submitted.
+- CrowdPulse: real initial-interface capture from https://crowdpulse-70bq.onrender.com/. The repository sample CSV upload returned a network error; no populated dataset or AI response was fabricated.
+- Legal AI Assistant: fresh live capture from https://jiten-legal-ai-assistant.streamlit.app/ after waking the app. No legal document or AI request was submitted.
+- BizLink: actual screenshots published in https://github.com/Jiten28/BizLink (landing, onboarding, dashboard). The published Vercel deployment was unavailable; these are not fresh live captures.
+- Gallery supports additional genuine images for FounderPilot and BizLink. Captions distinguish live captures, repository images, and the empty CrowdPulse state.
+- Project descriptions/providers are unchanged pending confirmation: current CrowdPulse is CSV/GenAI operations rather than the existing CV/deep-learning description; Legal UI shows OpenAI rather than the existing Gemini description.
+- This source release does not reintroduce docs/, reference/, or public/cv-pages/. Original sources remain in prior release archives if needed.
+
+### Keep / remove
+Keep the current src/, public/ assets including Jiten_Kumar_CV.pdf, scripts/, root index.html, package files and configurations. tailwind.config.js is referenced by index.css. Keep .git when replacing your working files.
+Old public/cv-pages images, duplicate release ZIPs, logs, and generated dist/ or *.tsbuildinfo can be removed; node_modules is generated but requires npm ci if removed. Do not delete src/pages/CVPage.tsx. Copy clean source folders rather than merging obsolete components.

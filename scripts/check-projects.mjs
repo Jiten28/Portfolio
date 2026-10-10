@@ -22,6 +22,7 @@ for (const project of projects) {
   for (const image of [
     `/projects/${project.slug}.webp`,
     ...(project.workImages || []),
+    ...(project.galleryImages || []),
   ]) {
     if (!fs.existsSync(path.join("public", image.slice(1))))
       throw new Error(`Missing asset: ${image}`);

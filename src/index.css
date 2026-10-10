@@ -641,9 +641,9 @@ button:disabled {
 /* The real FounderPilot shots are landscape: give them landscape slots,
    rather than a tall box or stretching their pixel proportions. */
 .founder-feature .featured-images { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
-.founder-feature .screenshot-2 { grid-column: 1/3; grid-row: 1; aspect-ratio: 1440/1000; }
-.founder-feature .screenshot-0 { grid-column: 1; grid-row: 2; aspect-ratio: 1440/1000; }
-.founder-feature .screenshot-1 { grid-column: 2; grid-row: 2; aspect-ratio: 1440/1000; }
+.founder-feature .screenshot-2 { grid-column: 1/3; grid-row: 1; aspect-ratio: 1440/900; }
+.founder-feature .screenshot-0 { grid-column: 1; grid-row: 2; aspect-ratio: 1440/900; }
+.founder-feature .screenshot-1 { grid-column: 2; grid-row: 2; aspect-ratio: 1440/900; }
 .founder-feature .screenshot-button img { object-fit: contain; }
 .founder-feature { position: relative; top: auto; }
 @media (min-width: 1024px) {
@@ -664,7 +664,7 @@ button:disabled {
 .nav-brand:hover .brand-frame { border-color: #d6c6ac; box-shadow: 0 0 16px rgba(214,198,172,.12); }
 .nav-links a { position: relative; border: 0; padding: 0 3px; }
 .nav-links a:hover,.nav-links a.active { border: 0; }
-.nav-indicator { position: absolute; height: 2px; bottom: 1px; left: 3px; right: 3px; background: linear-gradient(90deg,#aa9371,#e0d3bc); border-radius: 2px; }
+
 .hero-section { height: calc(100svh - 76px); }
 #about,#featured,.cv-preview { scroll-margin-top: 92px; }
 .tech-row,.tech-cycle { display: flex; gap: 12px; width: max-content; }
@@ -695,4 +695,12 @@ button:disabled {
 
 /* One local underline: no shared-layout or vertical scroll projection. */
 .site-nav .nav-links { position:relative; }
-.nav-indicator { left:0;right:auto;bottom:1px;pointer-events:none;transition:transform .28s cubic-bezier(.22,1,.36,1),width .28s cubic-bezier(.22,1,.36,1),opacity .15s; }
+
+
+/* Fixed underline per link: fade only, no moving geometry or layout projection. */
+.nav-links a::after { content:"";position:absolute;left:3px;right:3px;bottom:1px;height:2px;border-radius:2px;background:linear-gradient(90deg,#aa9371,#e0d3bc);opacity:0;pointer-events:none;transition:opacity .14s; }
+.nav-links a.active::after { opacity:1; }
+.nav-links:has(a:hover) a::after { opacity:0; }
+.nav-links:has(a:hover) a:hover::after { opacity:1; }
+.nav-links:has(a:focus-visible) a::after { opacity:0; }
+.nav-links:has(a:focus-visible) a:focus-visible::after { opacity:1; }

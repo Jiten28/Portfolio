@@ -6,13 +6,18 @@ import { projects, type PortfolioProject } from "../data/projects";
 const filters = ["All", "AI / ML", "GenAI", "Full-Stack / Web", "Utilities"];
 function ProjectCard({ project }: { project: PortfolioProject }) {
   const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState(0);
   const image = `/projects/${project.slug}.webp`;
+  const gallery = project.galleryImages ?? [image];
   return (
     <article className="glow-card gallery-card h-full rounded-[28px] border p-5 sm:p-6 flex flex-col gap-4">
       <button
         className="gallery-image-button"
         aria-label={`Enlarge ${project.name} project image`}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setSelected(0);
+          setOpen(true);
+        }}
       >
         <img
           src={image}
@@ -26,6 +31,11 @@ function ProjectCard({ project }: { project: PortfolioProject }) {
           <Maximize2 size={15} />
         </span>
       </button>
+      {project.imageCaption && (
+        <p className="text-xs leading-relaxed" style={{ color: "#aab5be" }}>
+          {project.imageCaption}
+        </p>
+      )}
       <div className="flex-1">
         <p
           className="uppercase tracking-widest text-xs mb-2"
@@ -95,10 +105,10 @@ function ProjectCard({ project }: { project: PortfolioProject }) {
       )}
       {open && (
         <ImageLightbox
-          images={[image]}
-          index={0}
+          images={gallery}
+          index={selected}
           title={project.name}
-          onIndex={() => {}}
+          onIndex={setSelected}
           onClose={() => setOpen(false)}
         />
       )}
