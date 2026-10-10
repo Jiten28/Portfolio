@@ -11,6 +11,7 @@ export interface PortfolioProject {
   featuredSummary?: string;
   workImages?: string[];
   galleryImages?: string[];
+  previewImage?: string;
   imageCaption?: string;
   achievement?: string;
   contribution?: string;

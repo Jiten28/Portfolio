@@ -20,7 +20,7 @@ for (const project of projects) {
   if (!project.name || (!project.githubUrl && !project.demoUrl))
     throw new Error(`Missing project details: ${project.slug}`);
   for (const image of [
-    `/projects/${project.slug}.webp`,
+    project.previewImage ?? `/projects/${project.slug}.webp`,
     ...(project.workImages || []),
     ...(project.galleryImages || []),
   ]) {

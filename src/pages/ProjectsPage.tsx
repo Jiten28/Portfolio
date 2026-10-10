@@ -7,7 +7,7 @@ const filters = ["All", "AI / ML", "GenAI", "Full-Stack / Web", "Utilities"];
 function ProjectCard({ project }: { project: PortfolioProject }) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(0);
-  const image = `/projects/${project.slug}.webp`;
+  const image = project.previewImage ?? `/projects/${project.slug}.webp`;
   const gallery = project.galleryImages ?? [image];
   return (
     <article className="glow-card gallery-card h-full rounded-[28px] border p-5 sm:p-6 flex flex-col gap-4">

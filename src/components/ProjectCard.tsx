@@ -1,6 +1,11 @@
 import { useRef, useState } from "react";
 import { Github, ExternalLink, Trophy, Maximize2 } from "lucide-react";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
 import ImageLightbox from "./ImageLightbox";
 import type { PortfolioProject } from "../data/projects";
 export default function ProjectCard({
@@ -12,9 +17,18 @@ export default function ProjectCard({
 }) {
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "start start"] });
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (2 - index) * 0.03]);
-  const images = project.workImages ?? [`/projects/${project.slug}.webp`];
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start start"],
+  });
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [1, 1 - (2 - index) * 0.03],
+  );
+  const images = project.workImages ?? [
+    project.previewImage ?? `/projects/${project.slug}.webp`,
+  ];
   const [selected, setSelected] = useState<number | null>(null);
   return (
     <article
@@ -23,7 +37,10 @@ export default function ProjectCard({
       style={{ "--stack-top": `${100 + index * 20}px` } as React.CSSProperties}
       aria-labelledby={`featured-${project.slug}`}
     >
-      <motion.div style={{ scale: reduced ? 1 : scale }} className="featured-card glow-card rounded-[28px] sm:rounded-[40px] border p-5 sm:p-7 md:p-8">
+      <motion.div
+        style={{ scale: reduced ? 1 : scale }}
+        className="featured-card glow-card rounded-[28px] sm:rounded-[40px] border p-5 sm:p-7 md:p-8"
+      >
         <div className="featured-card-header">
           <div className="flex items-start gap-4 md:gap-6">
             <span aria-hidden="true" className="featured-number font-black">
