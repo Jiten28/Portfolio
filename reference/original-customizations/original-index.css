@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  background: #000000;
+  font-family: "Kanit", sans-serif;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #494d54 0%, #d6c6ac 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+
+::selection {
+  background: #aa9371;
+  color: #000000;
+}
+
+.reveal-keyword {
+  position: absolute;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9a9fa5;
+  opacity: 0.16;
+  filter: blur(0.5px);
+  transition: opacity 0.3s ease, filter 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 3;
+}
+.reveal-keyword.revealed {
+  opacity: 1;
+  filter: blur(0px);
+  color: #fef4e3;
+  text-shadow: 0 0 10px #fef4e3, 0 0 22px #d6c6ac, 0 0 40px #aa9371;
+}
+
+/* ---- Reusable hover animations ---- */
+
+/* Frame hover effect on project thumbnails -- looks veiled/dim at rest,
+   then a frame appears with a gap and the image brightens on hover,
+   matching the reference technique's outline + outline-offset motion */
+.frame-hover {
+  outline: 3px solid transparent;
+  outline-offset: 0px;
+  filter: brightness(0.72);
+  cursor: zoom-in;
+  transition: outline-offset 0.35s ease, outline-color 0.35s ease, filter 0.35s ease;
+}
+.frame-hover:hover {
+  outline: 3px solid #d6c6ac;
+  outline-offset: 8px;
+  filter: brightness(1.05);
+}
+
+/* Glowing gradient border on card hover */
+.glow-card {
+  position: relative;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.glow-card:hover {
+  animation: cardFloat 2.4s ease-in-out infinite;
+}
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(-4px); }
+  50% { transform: translateY(-8px); }
+}
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(120deg, #aa9371, #d6c6ac, #494d54, #aa9371);
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  animation: glowBorderShift 4s linear infinite;
+  pointer-events: none;
+}
+.glow-card:hover::before {
+  opacity: 1;
+}
+@keyframes glowBorderShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+/* Social icon fill-in hover */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(215,226,234,0.35);
+  color: #D7E2EA;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.45s ease, border-color 0.3s ease;
+}
+.social-icon:hover {
+  background: linear-gradient(135deg, #aa9371, #d6c6ac);
+  color: #0C0C0C;
+  border-color: transparent;
+  transform: translateY(-3px) scale(1.08) rotateY(360deg);
+}
+
+/* Glow-intensify hover for primary buttons */
+.glow-button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+.glow-button:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: brightness(1.1);
+}

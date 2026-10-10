@@ -1,96 +1,87 @@
-# Professional Portfolio
+# Jiten Kumar — updated titanium portfolio
 
-Welcome to my professional portfolio! This project showcases my expertise in building intuitive and responsive web applications using React.js.
+An updated, tested copy of the supplied portfolio. The original archive was not changed. The live portfolio has not been redeployed by this update.
 
-![image](https://github.com/user-attachments/assets/5cc8900a-7ef5-48aa-9a38-43ec1a71a830)
+## Run locally
 
-## Overview
+Use **Node.js 22.12 or newer in the 22.x line** (Netlify is configured for Node 22).
 
-This portfolio serves as a hub for my work, skills, and experiences. Built with modern web development practices, it highlights my proficiency in frontend development, UI/UX design, and React.js. It’s designed to be a dynamic and interactive platform where you can explore my projects, resume, and contact information.
-
-![image (2)](https://github.com/user-attachments/assets/92ec96ba-9fd8-4a3b-a726-21b47e0797f6)
-
-## Features
-
-- **Dynamic Projects Section**: Displays a curated list of my best projects with descriptions, technologies used, and live links.
-- **Responsive Design**: Optimized for seamless performance on both mobile and desktop devices.
-- **Interactive Resume**: An embedded resume with downloadable options.
-- **Contact Form**: A functional contact form with validation for seamless communication.
-- **Themed UI**: Light and dark modes for an enhanced user experience.
-
-## Tech Stack
-
-- **Frontend**: React.js, HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: Tailwind CSS for consistent and modern UI.
-- **Routing**: React Router for navigation.
-- **Form Handling**: EmailJS for the contact form integration.
-
-## Installation and Setup
-
-Follow these steps to run the project locally:
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/portfolio.git
-   ```
-2. **Navigate to the Project Directory**:
-   ```bash
-   cd portfolio
-   ```
-3. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-4. **Start the Development Server**:
-   ```bash
-   npm start
-   ```
-   Your application will be live at `http://localhost:3000`.
-
-## Folder Structure
-
+```bash
+npm ci
+npm run check
+npm run dev
 ```
-portfolio/
-├── public/
-│   ├── favicon.png
-│   ├── index.html
-│   ├── manifest.json
-│   └── robots.txt
-├── src/
-│   ├── Assets/
-│   ├── components/
-│   │   ├── App.css
-│   │   ├── App.js
-│   │   ├── App.test.js
-│   │   ├── index.css
-│   │   ├── index.js
-│   │   ├── reportWebVitals.js
-│   │   ├── setupTests.js
-│   │   └── style.css
-├── .gitignore
-├── package-lock.json
-└── package.json
+
+Open the local URL printed by Vite. No private API keys or environment variables are required for the portfolio.
+
+## Production build
+
+```bash
+npm run build
+npm run preview
 ```
+
+The build is in `dist/`. `npm run check` verifies project records and all referenced local project/CV assets. It is a structural check, not a replacement for browser testing.
 
 ## Deployment
 
-This portfolio is hosted on GitHub Pages. You can deploy it by following these steps:
+### Connected Git repository
 
-1. **Build the Project**:
-   ```bash
-   npm run build
-   ```
-2. **Deploy to GitHub Pages**:
-   ```bash
-   npm run deploy
-   ```
+Commit the source files, not `node_modules/` or `dist/`. Connect the repository to the existing Netlify site. The supplied `netlify.toml` sets:
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node version: `22`
 
-## Live Demo
+### Manual upload
 
-jitenkumarportfolio.netlify.app
+The separate **Portfolio-netlify-v3.zip** contains the production site, with `index.html` at its root. Extract it and upload the folder containing that `index.html` to Netlify's manual deployment flow. Do not upload the source folder as a static website.
 
-## Future Enhancements
+### Verify on staging before replacing the live site
 
-- **Backend Integration**: Add a backend for handling form submissions and storing data.
-- **Blog Section**: Implement a blog to share technical articles and tutorials.
-- **Animations**: Use libraries like Framer Motion for enhanced interactivity.
+Check Home, Skills, Projects, CV, direct refreshes, `/about`, `/project`, `/resume`, a nonexistent URL, the email links, the PDF, and important demos. BrowserRouter aliases cover local preview; Netlify's `_redirects` provides production redirects and SPA fallback. A platform-level fallback serves unknown paths with HTTP 200; the app still displays a useful 404 page. A server-rendered true HTTP 404 would require a different hosting/router setup.
+
+The canonical and social URLs retain the existing `https://jitenkumarportfolio.netlify.app` address. If using another hostname, update `index.html`, `src/components/RouteEffects.tsx`, `public/robots.txt`, `public/sitemap.xml`, and regenerate `public/og-image.png` if its printed URL should change. Social bots may use only the initial HTML metadata; route-specific rich share cards require prerendering/SSR.
+
+## What changed
+
+- Shared project data now lives in `src/data/projects.ts`; both homepage and gallery use it.
+- 23 projects. AgriVision-XAI, Cindrix-AI, and FounderPilot AI are the featured three.
+- Voyage-AI is tenth; Malware Detection is eighteenth, sixth from the bottom.
+- FounderPilot includes the Hacklabify sixth-place result and the user's contribution: frontend plus selected AI features. Its screenshots were captured from the public demo, without submitting startup data.
+- Added the Sport Store deployment to E-Commerce Website.
+- Added one direct Freelance Website link near Contact Me to the existing supplied website. No freelance website was created, recreated, or modified, and it is not a project card.
+- About is rewritten as readable, naturally wrapping paragraphs.
+- Original-style scattered whole-word cursor reveal highlights 11 role and technology phrases; name highlighting and project-code snippets are removed. It uses motion values, not a React state update per pointer movement. Identity and role are always visible. Touch/reduced-motion modes do not rely on the reveal.
+- Fixed contact links, nested interactive controls, legacy URLs, scroll reset/hash jumps, and unknown-route presentation.
+- Featured cards use content-based flow; sticky presentation is limited to sufficiently large screens and disabled for reduced motion. The final CTA has separation from the last card.
+- Added screenshot lightboxes with native dialog focus handling, Escape dismissal, and keyboard previous/next navigation.
+- Added gallery search, category filters, counts, and an empty state.
+- Skills accordion uses real buttons, expanded states, hidden collapsed panels, and visible focus.
+- Original scroll-linked About text, opposing full-tech marquee rows, featured-card scaling, and social-icon rotation/glow are preserved with reduced-motion alternatives. The marquee shows 21 unique technologies; a second visual copy only enables a seamless loop, while reduced motion shows each once. Original custom source components are preserved in `reference/original-customizations/` for comparison; they are not a second website.
+- Sparse constellation-shaped neural connections replace the dense mesh, with cursor glow and subtle parallax.
+- Contact Me appears twice on the homepage: hero and footer; the About duplicate is removed.
+- FounderPilot screenshots use landscape-proportioned slots without distortion.
+- The sticky glass header uses the existing JK favicon in a brass/graphite frame, with a sliding navigation indicator. Existing SVG interface icons are kept.
+- CV page embeds the actual PDF with browser-native controls where supported, plus Open PDF/Download and fallback text. No image previews or hardcoded page count.
+- Retained existing user-supplied gallery artwork and added real FounderPilot captures. Existing illustrated previews should be replaced with real app screenshots when available; they are labeled as project previews, not verified screenshots.
+- Converted screenshots/preview images to WebP, lazy-loaded below-fold images, split secondary route/calendar code, removed the blocking preloader, and limited background drawing to a viewport canvas that pauses when hidden and becomes static for reduced motion.
+- GitHub stats have caching, timeout/failure handling, repository pagination, and no duplicate contribution-count fetch. The calendar is labeled for the last 12 months.
+- Added favicon, share card, descriptions, canonical links, robots/sitemap, and Netlify deployment settings.
+- Updated Vite, React Router, and Tailwind/PostCSS, with the lockfile included. Automated npm audit reported no known vulnerabilities at handoff; this is not a security guarantee.
+
+## Content you should verify separately
+
+- The original PDF CV is preserved byte-for-byte. FounderPilot was added to the projects, **not to the PDF**. To update the CV, replace `public/Jiten_Kumar_CV.pdf` and redeploy. The embedded viewer, Open PDF, and Download all use that one file; no image conversion or page-count edits are needed. Browser-native PDF embedding varies, especially on mobile; Open PDF remains available. Editing a different local or cloud file does not update the website until this file is replaced and deployed.
+- Selected unexplained performance/engagement percentages were removed from website project descriptions. Restore them only with evaluation context/evidence. The original PDF still contains its original claims.
+- Internship dates and the original experience text were retained; review any “Developing”/“Enhancing” wording for roles that have ended.
+- Nimbus/Cindrix and MediVerse/Wonderful Crown naming should be clarified if they refer to renamed or separate projects.
+- The Hacklabify achievement and personal contribution are based on the user's supplied information, not independent competition verification.
+
+## Tests and limits
+
+See `docs/QA.md`. A successful build, automated accessibility audit, and local browser checks do not guarantee every external demo's functionality or replace testing on actual devices and the deployment host.
+
+## Windows install recovery / migrating the old repository
+If `npm ci` fails with EPERM on a native Lightning CSS file, stop the portfolio dev server/build processes, close tools using this project, and retry. If still locked, restart Windows. Then remove only the project’s `node_modules` and run `npm ci` again. Do not delete the lockfile or disable antivirus. Use the documented Node 22.x environment. The subsequent missing-TypeScript error can be a consequence of the incomplete install.
+
+Use a clean copy of this release’s `src` and `public` folders, rather than merging old Create React App source and unused custom TSX files into it. Back up your existing repository first and keep `.git`. Original custom components are retained separately in `reference/original-customizations`. Old CRA `public/index.html` and `.js` app entries are replaced by root `index.html`, `src/main.tsx`, and `src/App.tsx`. Review deletions and untracked additions together before committing. Never commit `node_modules`, `dist`, local env files, or downloaded ZIPs.
