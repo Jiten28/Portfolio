@@ -61,3 +61,9 @@
 - Netlify PDF cache header requests revalidation after updates. Not yet tested on a live Netlify deployment.
 - Browser PDF internals and inline support differ; Open PDF is the reliable alternative. No claim of identical native viewer behavior on all mobile browsers.
 - Added text line-ending rules and Windows/migration recovery notes.
+
+## v7 navbar correction
+- Replaced shared-layout underline with one persistent, locally positioned horizontal indicator.
+- Resize/font measurement, focus/hover/active state, and reduced-motion behavior retained.
+- Repeated Skills clicks and cross-route transitions tested from the bottom of long pages at 1440, 390, and 320 widths; animation frames checked for header containment and final link alignment.
+- Removed unused portrait from active src; original asset preserved under reference. Cleanup guide included.
