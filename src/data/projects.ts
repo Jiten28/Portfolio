@@ -6,6 +6,7 @@ export interface PortfolioProject {
   stack: string[];
   githubUrl?: string;
   demoUrl?: string;
+  serverUrl?: string;
   palette: [string, string];
   group: "AI / ML" | "GenAI" | "Full-Stack / Web" | "Utilities";
   featuredSummary?: string;
@@ -83,10 +84,11 @@ export const projects: PortfolioProject[] = [
     stack: ["React", "TypeScript", "FastAPI", "Groq", "SQLite", "Recharts"],
     githubUrl: "https://github.com/Jiten28/FounderPilot-AI",
     demoUrl: "https://founderpilot-ai-frontend.onrender.com/",
+    serverUrl: "https://founderpilot-ai-backend.onrender.com/",
     palette: ["#494d54", "#aa9371"],
     achievement: "6th place · National-level Hacklabify hackathon",
-    contribution:
-      "My contribution: frontend development and selected AI features.",
+    // contribution:
+    //   "My contribution: frontend development and selected AI features.",
     group: "GenAI",
     featuredSummary:
       "Startup health scoring, risk assessment, and a 30-day action plan. I contributed to the frontend and selected AI features.",
@@ -165,6 +167,8 @@ export const projects: PortfolioProject[] = [
     desc: "A full-stack perfume shop built with React, Tailwind, Vite, Node.js, and MongoDB — responsive UI, multi-image product pages, MongoDB-stored reviews, a trending section, and smooth animations.",
     stack: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/Jiten28/Perfume-Shop-MERN-Stack",
+    demoUrl: "https://perfume-shop-digital.netlify.app/",
+    serverUrl: "https://perfume-shop-backend-fryp.onrender.com/",
     palette: ["#d6c6ac", "#aa9371"],
     group: "Full-Stack / Web",
   },
@@ -175,6 +179,7 @@ export const projects: PortfolioProject[] = [
     desc: "An AI-powered travel planning platform generating personalized itineraries, budget planning, hotel recommendations, destination insights, weather forecasts, and AI-generated travel visuals.",
     stack: ["Google AI Studio", "Antigravity"],
     githubUrl: "https://github.com/Jiten28/Voyage-AI",
+    demoUrl: "https://voyage-ai-p1bd.onrender.com/",
     palette: ["#d6c6ac", "#494d54"],
     group: "GenAI",
   },
