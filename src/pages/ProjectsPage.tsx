@@ -97,6 +97,18 @@ function ProjectCard({ project }: { project: PortfolioProject }) {
             Demo
           </a>
         )}
+        {project.serverUrl && (
+          <a
+            className="outline-button filled"
+            href={project.serverUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${project.name} start server`}
+          >
+            <ExternalLink size={16} aria-hidden="true" />
+            Start Server
+          </a>
+        )}
       </div>
       {project.demoNote && (
         <p className="text-sm leading-relaxed" style={{ color: "#aab5be" }}>
